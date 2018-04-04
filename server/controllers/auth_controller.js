@@ -26,7 +26,7 @@ module.exports = {
     req.session.destroy();
     res.status(200).send(req.session);
   },
-  getUser: (req, res, next) => {
+  user: (req, res, next) => {
     // const { id } = req.params;
     // const filtered = users.filter(user => user.id.toString() === id);
     // console.log(filtered[0]);

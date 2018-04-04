@@ -14,7 +14,6 @@ module.exports = {
       user.cart.push(swagFilter[0]);
       user.total += swagFilter[0].price;
       res.status(200).send(user);
-      console.log(user);
     }
   },
   delete: (req, res, next) => {
@@ -27,7 +26,7 @@ module.exports = {
       e => (totalVar += e.price)
     );
     req.session.user.total = totalVar;
-    res.status(200).send(req.session.user.cart);
+    res.status(200).send(req.session.user);
   },
   checkout: (req, res, next) => {
     req.session.user.cart = [];

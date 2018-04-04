@@ -37,7 +37,7 @@ app.get("/api/swag", swag_controller.read);
 app.post("/api/login", auth_controller.login);
 app.post("/api/register", auth_controller.register);
 app.post("/api/signout", auth_controller.signOut);
-app.get("/api/getuser/", auth_controller.getUser);
+app.get("/api/user/", auth_controller.user);
 
 //Cart
 app.post("/api/cart", cart_controller.add);
